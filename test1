@@ -1,0 +1,45 @@
+# Create the Label widgets
+l0_1 = Label(window, text="1st")
+l0_1_value = StringVar()
+l0_1_input = Entry(window, textvariable=l0_1_value)
+
+l0_2 = Label(window, text="2nd")
+l0_2_value = StringVar()
+l0_2_input = Entry(window, textvariable=l0_2_value)
+
+l1_1 = Label(window, text='Logic')
+l1_2 = Label(window, text='Pounds')
+l1_3 = Label(window, text='Ounce')
+l1_4 = Label(window, text='output')
+# Create the Text Widgets
+tx2_1 = Text(window, height=1, width=20)
+tx2_2 = Text(window, height=1, width=20)
+tx2_3 = Text(window, height=1, width=20)
+tx2_4 = Text(window, height=1, width=20)
+# Create the Button Widget
+b0_1 = Button(window, text="Convert", command=from_kg)
+b0_2 = Button(window, text="avgCal", command=avg)
+b0_3 = Button(window, text="Logic", command=logic)
+b0_4 = Button(window, text="Clock", command=clock)
+# grid
+l0_1_input.grid(row=0, column=1)
+l0_2_input.grid(row=0, column=3)
+
+b0_1.grid(row=0, column=4)
+b0_2.grid(row=0, column=5)
+b0_3.grid(row=0, column=6)
+b0_4.grid(row=0, column=7)
+
+l0_1.grid(row=0, column=0)
+l0_2.grid(row=0, column=2)
+l1_1.grid(row=1, column=0)
+l1_2.grid(row=1, column=1)
+l1_3.grid(row=1, column=2)
+l1_4.grid(row=1, column=3)
+
+tx2_1.grid(row=2, column=0)
+tx2_2.grid(row=2, column=1)
+tx2_3.grid(row=2, column=2)
+tx2_4.grid(row=2, column=3)
+# Start the GUI
+window.mainloop()
